@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class HomePage {
@@ -35,9 +36,12 @@ public class HomePage {
   WebElement statusLogin;
 
   public SelenideElement userNameStatus() {
-    return $(statusLogin).should(exist);
+
+    return $(statusLogin).shouldHave(text("Hans Mustermann"));
   }
 
 
+  public void quiteBrowser() {
 
+  }
 }

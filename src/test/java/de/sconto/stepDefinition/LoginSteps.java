@@ -46,7 +46,14 @@ public class LoginSteps {
     customer.userName("Hans Mustermann");
   }
 
-  // Negative Test:
+  @And ("User quites browser")
+  public void quite_browser() {
+    home = Selenide.page(HomePage.class);
+    home.quiteBrowser();
+  }
+
+
+    // Negative Test:
 
   @And("User enters valid email and invalid password")
   public void enter_valid_email_invalid_password(DataTable table) {

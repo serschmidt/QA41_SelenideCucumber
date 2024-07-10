@@ -14,6 +14,7 @@ public class HomePageSteps {
   @Given("User is on HomePage")
   public void user_is_on_home_page() {
     homePage=open(baseURL, HomePage.class);
+//    System.setProperty("selenide.browser","Firefox");
     getWebDriver().manage().window().maximize();
     homePage.acceptCookies();
 

@@ -19,11 +19,11 @@ Feature: Login
     When User clicks on User icon
     Then User verifies Login form
     And User enters valid email and invalid password
-      | email   | passwort  |
+      | email   | password  |
       | <email> | <password> |
     And User clicks on Anmelden button
     Then User verifies Error Message
-    And User quites browser
+#    And User quites browser
     Examples:
       | email       | password  |
       | hans@gm.com | qwert007! |
